@@ -1,6 +1,7 @@
 import streamlit as st
 import pickle
 import requests
+
 import pandas as pd
 
 
@@ -38,7 +39,7 @@ st.header('MOVIES RECOMMENDER SYSTEM')
 movies = pickle.load(open('movie_list.pkl', 'rb'))
 
 print(movies)
-similarity = pickle.load(open('similarity.pkl', 'rb'))
+similarity = pickle.load(open('similarity_compressed.pkl', 'rb'))
 
 #movie_list = list(movies['title'].values)
 movie_list = list(movies['title'].values())
